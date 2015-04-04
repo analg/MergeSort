@@ -1,12 +1,10 @@
-import static org.junit.Assert.*;
+import org.junit.Before;
+import org.junit.Test;
 
 import java.util.Arrays;
 import java.util.Random;
 
-import org.junit.Before;
-import org.junit.FixMethodOrder;
-import org.junit.Test;
-import org.junit.runners.MethodSorters;
+import static org.junit.Assert.assertArrayEquals;
 
 public class TestSorts {
 
@@ -67,7 +65,6 @@ public class TestSorts {
 	public void testHarder() {
 		int[] testIn={2,2,10,6,1,2,9}, testExpect={1,2,2,2,6,9,10};
 		mySorter.sort(testIn);
-		System.out.println(Arrays.toString(testIn));
 		assertArrayEquals(testExpect, testIn);
 	}
 	

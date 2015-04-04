@@ -1,12 +1,15 @@
-import java.util.Arrays;
-
 public class MergeSort implements SortI {
+	/**
+	 * Sort array in place.
+	 *
+	 * @param array to be sorted
+	 */
 	@Override
-	public void sort(int[] inOut) {
-		int total = inOut.length;
+	public void sort(int[] array) {
+		int total = array.length;
 		int[][] sub = new int[total][1];
 		for (int i = 0; i < total; i++) {
-			sub[i][0] = inOut[i];
+			sub[i][0] = array[i];
 		}
 		int length = total;
 		int halflength;
@@ -18,7 +21,7 @@ public class MergeSort implements SortI {
 			length = halflength;
 		}
 		if (total > 0) {
-			System.arraycopy(sub[0], 0, inOut, 0, total);
+			System.arraycopy(sub[0], 0, array, 0, total);
 		}
 	}
 
